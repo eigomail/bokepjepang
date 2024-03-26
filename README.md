@@ -1,4 +1,4 @@
-# bokep remaja 🎥
+# bokep jepang 🎥
 
 An SSR video streaming frontend which uses doodstream.com as a backend. It is built using [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
@@ -16,7 +16,7 @@ An SSR video streaming frontend which uses doodstream.com as a backend. It is bu
 
 ## Live Demo
 
-A live demo of the project is available at [https://bokepremaja.pages.dev](https://bokepremaja.pages.dev/).
+A live demo of the project is available at [https://bokepjepang.pages.dev](https://bokepjepang.pages.dev/).
 
 ## Configuration
 
@@ -24,7 +24,7 @@ The following environment variables are required to run the project:
 
 -   `DOODSTREAM_API_KEY`: API key for doodstream.com
 -   `DOODSTREAM_API_URL`: API URL for doodstream.com (default: `https://doodapi.com`)
--   `SITENAME`: Name of the website (default: `bokep remaja`)
+-   `SITENAME`: Name of the website (default: `bokep jepang`)
 
 ## Development
 
@@ -54,7 +54,7 @@ npm run dev
 1. Clone the repository
 
 ```bash
-git clone <repo-url> doodstream-web
+git clone <repo-url> bokepjepang
 cd doodstream-web
 ```
 
@@ -80,7 +80,7 @@ npm run start
 
 ## Deployment on Cloudflare Pages
 
-1. Fork the [repository](https://github.com/makanputu/bokepome) on GitHub.
+1. Fork the [repository](https://github.com/eigomail/bokepjepang) on GitHub.
 2. Create a new project on [Cloudflare Pages](https://pages.cloudflare.com/).
 3. Connect your GitHub account with Cloudflare Pages.
 4. Select the forked repository and click on `Begin Setup`.
