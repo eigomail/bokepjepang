@@ -81,27 +81,7 @@ export default async function Video({ params }: PageProps) {
     }
 
     const file = data.result[0];
-const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'VideoObject',
-        name: `${file.title} - ${SITENAME}`,
-        thumbnailUrl: file.splash_img,
-        description: `${file.title} di ${SITENAME} Video Bokep Indo Jepang Barat Terbaru bocil jilbab smp mama sma hijab abg colmek film tante hot`,
-        url: `https://bokepjepang.pages.dev/v/${file.filecode}`,
-        embedUrl: `https://${upstream}/e/${file.filecode}`,
-        uploadDate: new Date(
-            file.uploaded + ".000Z"
-        ).toISOString(),
-        interactionStatistic: {
-            '@type': `InteractionCounter`,
-                userInteractionCount: `${file.views}`,
-            interactionType: {
-                '@type': `WatchAction`,
-                target: `https://bokepjepang.pages.dev/v/${file.filecode}`
-            }  
-        }
-        }
-        const jsonLd2 = {
+        const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: `${file.title} - ${SITENAME}`,
@@ -119,26 +99,7 @@ const jsonLd = {
                 '@type': 'Person',
                 name: 'admin',
                 url: 'https://bokepjepang.pages.dev'
-              },
-        interactionStatistic: {
-            '@type': `InteractionCounter`,
-                userInteractionCount: `${file.views}`,
-            interactionType: {
-                '@type': `ReadAction`,
-                target: `https://bokepjepang.pages.dev/v/${file.filecode}`
-            }  
-        }
-        }
-        const jsonLd3 = {
-            '@context': 'https://schema.org', 
-            '@type': 'Book', 
-            'name': `${file.title} - ${SITENAME}`, 
-            'aggregateRating': {
-            '@type': 'AggregateRating',	
-                'ratingValue': '5',	
-                'ratingCount': `${file.views}`,	
-                'bestRating': '5',	
-                'worstRating': '1' }
+              }
         }
     return (
         <div className="grid col-span-full gap-4 md:gap-4 md:mx-10">
@@ -147,14 +108,6 @@ const jsonLd = {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd2) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd3) }}
         />
         {/* ... */}
         </section>
@@ -174,7 +127,8 @@ const jsonLd = {
                 </CardHeader>
                 <CardContent>
                     <div className="grid grid-flow-row lg:grid-flow-col">
-                        <Table>
+              <p>Video bokep indo terbaru viral {file.title} di {SITENAME} Video Bokep Indo Jepang Barat Terbaru bocil jilbab smp mama sma hijab abg colmek film tante hot twitter asia download live stw situs indonesia nonton link sd crot playbokep simontok bokepin montok baru perawan anak kecil telegram selingkuh ojol cantik gay vidio lokal artis pelajar janda streaming jepang barat korea japan jav cina japanese china rusia arab india thailand hd anime hentai bokepind gudang avtub pijat sotwe rumah pemerkosaan inggris xpanas pure tobrut vcs ngintip binor remaja yandex update perselingkuhan wiki raja full com porno indoh</p>
+                      <Table>
                             <TableBody>
                                 <TableRow>
                                     <TableCell className="flex gap-2 items-center">
@@ -214,30 +168,9 @@ const jsonLd = {
                                 </TableRow>
                             </TableBody>
                         </Table>
-                        <div className="grid grid-cols-2 gap-2 mt-8 md:grid-cols-3 lg:grid-cols-2 lg:ml-4 lg:my-4">
-                            <Link
-                                href={`https://${upstream}/d/${file.filecode}`}
-                                className="col-span-full md:col-auto lg:col-span-full"
-                            >
-                                <Button className="w-full">
-                                    <DownloadIcon className="size-4 me-1 mb-1"></DownloadIcon>
-                                    Download
-                                </Button>
-                            </Link>
-                            <CopyButton className="bg-secondary lg:col-span-full">
-                                <Share1Icon className="size-4 me-1 mb-0.5"></Share1Icon>
-                                Share
-                            </CopyButton>
-                            <LikeButton
-                                className="lg:col-span-full"
-                                useButton={true}
-                                file={file}
-                            />
-                        </div>
                     </div>
                 </CardContent>
             </Card>
-            <p>Video bokep indo terbaru viral {file.title} di {SITENAME} Video Bokep Indo Jepang Barat Terbaru bocil jilbab smp mama sma hijab abg colmek film tante hot twitter asia download live stw situs indonesia nonton link sd crot playbokep simontok bokepin montok baru perawan anak kecil telegram selingkuh ojol cantik gay vidio lokal artis pelajar janda streaming jepang barat korea japan jav cina japanese china rusia arab india thailand hd anime hentai bokepind gudang avtub pijat sotwe rumah pemerkosaan inggris xpanas pure tobrut vcs ngintip binor remaja yandex update perselingkuhan wiki raja full com porno indoh</p>
             <h2 className="text-2xl font-bold text-center my-4">
                 Related Video {file.title}
             </h2>
