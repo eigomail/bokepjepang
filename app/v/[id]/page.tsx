@@ -101,13 +101,47 @@ export default async function Video({ params }: PageProps) {
                 url: 'https://bokepjepang.pages.dev'
               }
         }
+        const jsonLd2 = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: `${file.title}`,
+        image: file.splash_img,
+        description: `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
+        url: `https://bokepjepang.pages.dev/v/${file.filecode}`,
+        datePublished: new Date(
+            file.uploaded + ".000Z"
+        ).toISOString(),
+        publisher: {
+            '@type': 'Organization',
+            name: `${SITENAME}`,
+            logo: 'https://bokepjepang.pages.dev/favicon.ico'},
+            author: {
+                '@type': 'Person',
+                name: 'admin',
+                url: 'https://bokepjepang.pages.dev'
+              }
+        }
     return (
-        <div className="grid col-span-full gap-4 md:gap-4 md:mx-10">
-        <section>
+        <div className="grid col-span-full gap-4 md:gap-4 md:mx-10" itemProp="video" itemScope itemType="http://schema.org/VideoObject">
+<meta itemProp="author" content="admin" />
+<meta itemProp="name" content={`${file.title}`} />
+<meta itemProp="description" content={`${file.title}`} />
+<meta itemProp="description" content={`${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`} />
+<meta itemProp="duration" content="P0DT0H8M43S" />
+<meta itemProp="thumbnailUrl" content={`${file.splash_img}`} />
+<meta itemProp="embedURL" content={`https://ds2play.com/e/${file.filecode}`} />
+<meta itemProp="uploadDate" content={`${new Date(
+            file.uploaded + ".000Z"
+        ).toISOString()}`} />
+	<section>
         {/* Add JSON-LD to your page */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd2) }}
         />
         {/* ... */}
         </section>
@@ -175,6 +209,7 @@ export default async function Video({ params }: PageProps) {
                 Related Video {file.title}
             </h2>
             <SearchCardList query={file.title.split(" ")[2]} />
+<Script src="https://js.juicyads.com/jp.php?c=947403z2v256s2x2x294z2b4&u=http%3A%2F%2Fwww.juicyads.rocks"/>
         </div>
     );
 }
