@@ -134,11 +134,10 @@ export default async function Video({ params }: PageProps) {
         <div className="grid col-span-full gap-4 md:gap-4 md:mx-10" itemProp="video" itemScope itemType="http://schema.org/VideoObject">
 <meta itemProp="author" content="admin" />
 <meta itemProp="name" content={`${file.title}`} />
-<meta itemProp="description" content={`${file.title}`} />
 <meta itemProp="description" content={`${file.title} di ${SITENAME} Video Bokep Indo Jepang Barat Terbaru bocil jilbab smp mama sma hijab abg colmek film tante hot`} />
 <meta itemProp="duration" content={`${file.length}`} />
 <meta itemProp="thumbnailUrl" content={`${file.splash_img}`} />
-<meta itemProp="embedURL" content={`https://doodstream.com/e/${file.filecode}`} />
+<meta itemProp="embedURL" content={`https://ds2play.com/e/${file.filecode}`} />
 <meta itemProp="uploadDate" content={`${new Date(
             file.uploaded + ".000Z"
         ).toISOString()}`} />
