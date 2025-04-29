@@ -3,7 +3,6 @@ import { Metadata, ResolvingMetadata } from "next";
 import { humanDuration, humanSize } from "@/lib/utils";
 import { SITENAME } from "@/lib/constants";
 import Script from "next/script";
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import MessageBox from "@/components/message-box";
@@ -42,11 +41,11 @@ export async function generateMetadata(
             title,
             description,
             images: `${file.player_img}`,
-            url: `/v/${file.file_code}`,
+            url: `/v/${file.file_code}#${file.file_title}`,
             type: `article`,
         },
         alternates: {
-            canonical: `/v/${file.file_code}`,
+            canonical: `/v/${file.file_code}#${file.file_title}`,
         },
     };
 }
@@ -70,7 +69,7 @@ export default async function Video({ params }: PageProps) {
         headline: `${file.file_title}`,
         image: file.splash_img,
         description: `${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`,
-        url: `https://bokepjepang.pages.dev/v/${file.file_code}`,
+        url: `https://bokepjepang.pages.dev/v/${file.file_code}#${file.file_title}`,
         datePublished: new Date(
             file.file_created + ".000Z"
         ).toISOString(),
@@ -89,8 +88,8 @@ export default async function Video({ params }: PageProps) {
         '@type': 'Article',
         headline: `${file.file_title}`,
         image: file.player_img,
-        description: `${file.title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`,
-        url: `https://bokepjepang.pages.dev/v/${file.file_code}`,
+        description: `${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`,
+        url: `https://bokepjepang.pages.dev/v/${file.file_code}#${file.file_title}`,
         datePublished: new Date(
             file.file_created + ".000Z"
         ).toISOString(),
@@ -107,7 +106,7 @@ export default async function Video({ params }: PageProps) {
                 userInteractionCount: `${file.file_views}`,
             interactionType: {
                 '@type': `ReadAction`,
-                target: `https://bokepjepang.pages.dev/v/${file.file_code}`
+                target: `https://bokepjepang.pages.dev/v/${file.file_code}#${file.file_title}`
             }  
         }
         }
@@ -136,10 +135,10 @@ export default async function Video({ params }: PageProps) {
         {/* ... */}
         </section>
                         <iframe
-                className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
+                className="w-full h-[55vh] md:h-[55vh] lg:h-[70vh]"
                 src={`https://filemoon.to/e/${file.file_code}`}
                 scrolling="no"
-                title={file.title}
+                title={file.file_title}
                 frameBorder={0}
                 allowFullScreen={true}
             ></iframe>
